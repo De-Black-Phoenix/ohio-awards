@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Montserrat } from 'next/font/google'
 import "./globals.css";
+import Footer from "@/components/Footer";
+import NavBar from "@/components/NavBar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -12,6 +15,10 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+
+const monsterrat = Montserrat({
+   subsets: ['latin'] 
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,9 +33,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${monsterrat.className} antialiased`}
       >
+
+        <NavBar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
