@@ -5,7 +5,7 @@ const SingleImageComponent = ({imageUrl}:{imageUrl:string}) => {
   return (
     <div className="w-full rounded-lg">
         <div className="w-full">
-            <Image src={imageUrl} alt="alt" width={240} height={300} className='w-full aspect-auto object-cover' />
+            <Image src={imageUrl} alt="alt" width={180} height={250} className='w-[180px] md:w-[250px] aspect-auto object-cover' />
         </div>
     </div>
   )

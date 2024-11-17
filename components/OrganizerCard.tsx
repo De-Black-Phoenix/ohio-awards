@@ -8,8 +8,8 @@ export const OrganizerCard = ({imageUrl, name, position}:{imageUrl: string, name
             <Image src="/organizer.png" alt="alt" width={240} height={300} className='w-full aspect-auto object-cover' />
         </div>
         <div className="flex justify-center w-full mt-2 flex-col">
-            <h1 className="font-bold text-center">Micky Charles</h1>
-            <p className="text-mainColor text-center">Philanthropist</p>
+            <h1 className="font-bold text-center text-sm md:text-base">Micky Charles</h1>
+            <p className="text-mainColor text-center text-sm md:text-base">Philanthropist</p>
         </div>
     </div>
   )
