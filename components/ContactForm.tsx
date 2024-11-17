@@ -8,7 +8,7 @@ const ContactForm = () => {
     
     <section className="w-full flex justify-center mb-16">
         <section 
-                className='w-9/12 relative bg-cover bg-center rounded-xl '
+                className='w-11/12 md:w-9/12 relative bg-cover bg-center rounded-xl '
                 style={{ backgroundImage: "url('/imageBackground.png')" }}
             >
                 <div className='absolute inset-0 bg-gradient-to-r from-[#fff] to-[#DB8A1] opacity-50'></div>
@@ -27,7 +27,6 @@ const ContactForm = () => {
                             </form>
                         </div>
                     </div>
-                    
                 </div>
         </section>
     </section>

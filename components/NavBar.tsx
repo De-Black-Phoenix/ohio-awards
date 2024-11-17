@@ -16,7 +16,7 @@ import NavLink from './NavLink';
   
 const NavBar = () => {
   return (
-    <section className="w-full flex flex-col">
+    <section className="w-full flex flex-col mb-10">
           <section className="flex md:hidden w-full mt-4 justify-between items-center px-6">
                 <Image src="/logo.png" alt="alt" width={150} height={150} />
                 <Sheet>
@@ -38,7 +38,7 @@ const NavBar = () => {
                   </SheetContent>
                 </Sheet>
             </section>
-            <section className="hidden md:flex flex-col w-full mt-4 items-center">
+            <section className="hidden md:flex flex-col w-full mt-4 items-center ">
                 <Image src="/logo.png" alt="alt" width={150} height={150} />
                 <section className="w-9/12 flex justify-center gap-5 mt-4">
                   <VoteLink link="https://www.google.com/forms/about/" title="Vote" key={2}/>
