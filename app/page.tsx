@@ -5,6 +5,9 @@ import Organizers from "@/components/Organizers";
 import HeroSection from "@/components/HeroSection";
 import HomeGallerySnippet from "@/components/HomeGallerySnippet";
 import HomeContact from "@/components/HomeContact";
+import HighlightsSection from "@/components/HighlightsSection";
+import Sponsors from "@/components/Sponsors";
+import ScheduleActivitiesSection from "@/components/ScheduledActivitiesSection";
 
 
 export default function Home() {
@@ -14,8 +17,10 @@ export default function Home() {
         <HeroSection/>
         <VisionMissionComponent title='Our Mission' description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur tempora iure esse culpa natus accusamus. Odit dolore ab doloribus sequi corrupti porro, minus fugiat sint odio iusto voluptatibus, voluptatem ea at officiis nostrum repudiandae! Reiciendis, ea velit. Non quos voluptatum vitae nobis numquam dicta suscipit repellat delectus nihil ipsum? Possimus.' reverse/>
         <HomeGallerySnippet/>
-        <Organizers/>
+        <ScheduleActivitiesSection/>
+        <HighlightsSection/>
         <HomeContact/>
+        <Sponsors/>
     </div>
   );
 }

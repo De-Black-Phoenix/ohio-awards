@@ -29,7 +29,7 @@ const CategoriesButton = ({isMobile}:{isMobile?: true}) => {
         <span className="ml-2"><ChevronDown/></span>
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 overflow-y-scroll">
+      <DropdownMenuContent className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
         
         <DropdownMenuGroup className='flex flex-col gap-4'>
             <DropdownMenuGroup>

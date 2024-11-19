@@ -1,6 +1,8 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import {
     Sheet,
+    SheetClose,
     SheetContent,
     SheetHeader,
     SheetTitle,
@@ -12,9 +14,18 @@ import {
   import Image from "next/image";
   import CategoriesButton from "@/components/CategoriesButton";
 import NavLink from './NavLink';
+import { useRouter } from 'next/navigation';
   
   
 const NavBar = () => {
+  const [open, setOpen] = useState(false)
+  const router = useRouter();
+
+  const handleNavLinkClick = (link: string) => {
+    router.push(link);
+    setOpen(false); // Manually close the sheet
+  };
+
   return (
     <section className="w-full flex flex-col mb-10">
           <section className="flex md:hidden w-full mt-4 justify-between items-center px-6">
@@ -24,16 +35,26 @@ const NavBar = () => {
                     <Menu size={36}/>
                   </SheetTrigger>
                   <SheetContent>
-                    <SheetHeader>
+                    <SheetHeader className='flex flex-col gap-4'>
                       <SheetTitle className="mb-4"></SheetTitle>
-                      <div className="flex flex-col gap-4">
                         <VoteLink link="https://www.google.com/forms/about/" title="Vote" key={2} isMobile={true}/>
-                        <MobileNavLink link="/" title="Home" key={1}/>
-                        <MobileNavLink link="/about" title="About" key={3}/>
+                        <SheetClose asChild>
+                          <MobileNavLink onClick={() => handleNavLinkClick('/')} link="/" title="Home" key={1}/>
+                        </SheetClose>
+                        
+                        <SheetClose asChild>
+                          <MobileNavLink onClick={() => handleNavLinkClick('/about')} link="/about" title="About" key={3}/>
+                        </SheetClose>
                         <CategoriesButton isMobile={true}/>
-                        <MobileNavLink link="/gallery" title="Gallery" key={5}/>
-                        <MobileNavLink link="/contact" title="Contact" key={6}/>
-                      </div>
+
+                        <SheetClose asChild>
+                        <MobileNavLink onClick={() => handleNavLinkClick('/gallery')} link="/gallery" title="Gallery" key={5}/>
+                        </SheetClose>
+                        <SheetClose asChild>
+                          <MobileNavLink onClick={() => handleNavLinkClick('/contact')} link="/contact" title="Contact" key={6}/>
+                        </SheetClose>
+
+
                     </SheetHeader>
                   </SheetContent>
                 </Sheet>
