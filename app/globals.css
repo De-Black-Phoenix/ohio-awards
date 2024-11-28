@@ -89,4 +89,47 @@ body {
 .scrollbar-thumb-gray-400::-webkit-scrollbar-track {
   background-color: #e2e8f0; /* Lighter gray for track */
 }
+/* 
+.slick-slide {
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+.slick-center {
+  opacity: 1;
+  transform: scale(1.2); 
+  border-radius: 40px; 
+}
+
+.slick-slide:nth-child(2),
+.slick-slide:nth-child(3) {
+  transform: scale(0.9); 
+}
+.slick-slide:nth-child(1),
+.slick-slide:nth-child(5) {
+  transform: scale(0.7); 
+} */
+
+.slick-slide {
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+.slick-center {
+  opacity: 1;
+  transform: scale(1.3); /* Largest scale for the center */
+  border-radius: 20px; /* Rounded corners for the largest */
+
+}
+
+/* For adjacent slides (left and right) */
+/* Styles for slides immediately adjacent to the center */
+.slick-center ~ .slick-slide:first-of-type,
+.slick-center ~ .slick-slide:last-of-type {
+  transform: scale(0.9); /* Slightly larger for adjacent slides */
+  opacity: 0.8;
+}
+
 

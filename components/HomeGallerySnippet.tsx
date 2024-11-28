@@ -1,5 +1,7 @@
+"use client"
 import React from 'react';
 import Header from './Header';
+import CarouselComponent from './Carousel';
 
 interface ImageCardProps {
   imageUrl: string;
@@ -26,19 +28,12 @@ const HomeGallerySnippet: React.FC = () => {
   return (
     <section className="w-full flex flex-col items-center justify-center mb-6 bg-gradient-to-b from-[#fff] via-[#CFC086] to-[#fff]">  
          <Header title="Gallery" description="Check out our gallery to explore past events memories"/>
-        <div className="flex w-11/12 md:w-9/12 justify-center gap-4 flex-wrap bg-white py-3 rounded-lg">
-        {images.map((image, index) => (
-            <div className="w-[180px] md:w-[180px]" key={index}>
-            <ImageCard imageUrl={image.imageUrl} caption={image.caption} />
-            </div>
-        ))}
-        <section className="block w-full">
+        <CarouselComponent images={images}/>
+        <section className="block w-full mt-6">
             <div className="flex w-full justify-center">
                 <a href="/" className="hover:bg-[rgb(183,110,21)] px-6 block bg-[#b76e1f] w-fit text-white py-2 rounded-full font-bold">View More</a>
             </div>
         </section>
-
-        </div>
     </section>
   
   );
