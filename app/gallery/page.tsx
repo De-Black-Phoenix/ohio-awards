@@ -1,7 +1,5 @@
-import Awardees from '@/components/Awardees'
 import GalleryTabs from '@/components/GalleryTabs'
 import Header from '@/components/Header'
-import PerformancesSection from '@/components/PerformancesSection'
 import { fetchGalleryPage } from '@/lib/actions'
 import React from 'react'
 export const revalidate = 0

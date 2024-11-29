@@ -8,17 +8,28 @@ import HomeContact from "@/components/HomeContact";
 import HighlightsSection from "@/components/HighlightsSection";
 import Sponsors from "@/components/Sponsors";
 import ScheduleActivitiesSection from "@/components/ScheduledActivitiesSection";
+import { fetchEventTimelines, fetchExpectations, fetchGalleryPageForHome, fetchKeyActivities, fetchMissionStatement } from "@/lib/actions";
+
+export const revalidate = 0
+
+export default async function Home() {
+  const {missionStatement} = await fetchMissionStatement()
+  const { tags, awardees, performances, gallery } = await fetchGalleryPageForHome()
+  const keyActivities = await fetchKeyActivities()
+  const timelines =await  fetchEventTimelines()
+  const expectations = await fetchExpectations();
 
 
-export default function Home() {
+
+  console.log(timelines)
   return (
     <div className="w-full flex flex-col relative min-h-screen">
         <Header title="Welcome" description="Ohio African Community Excellence Awards"/>
         <HeroSection/>
-        <VisionMissionComponent title='Our Mission' description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur tempora iure esse culpa natus accusamus. Odit dolore ab doloribus sequi corrupti porro, minus fugiat sint odio iusto voluptatibus, voluptatem ea at officiis nostrum repudiandae! Reiciendis, ea velit. Non quos voluptatum vitae nobis numquam dicta suscipit repellat delectus nihil ipsum? Possimus.' reverse/>
-        <HomeGallerySnippet/>
-        <ScheduleActivitiesSection/>
-        <HighlightsSection/>
+        <VisionMissionComponent title='Our Mission' description={missionStatement? missionStatement as string: 'No mission statement found'} reverse/>
+        <HomeGallerySnippet gallery={gallery}/>
+        <ScheduleActivitiesSection keyActivities={keyActivities} timelines={timelines} expectations={expectations}/>
+        <HighlightsSection tags={tags} awardees={awardees} performances={performances}/>
         <HomeContact/>
         <Sponsors/>
     </div>

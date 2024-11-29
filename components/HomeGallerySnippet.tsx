@@ -1,11 +1,15 @@
-"use client"
-import React from 'react';
-import Header from './Header';
-import CarouselComponent from './Carousel';
+"use client";
+import React from "react";
+import Header from "./Header";
+import CarouselComponent from "./Carousel";
 
 interface ImageCardProps {
   imageUrl: string;
   caption: string;
+}
+
+interface HomeGallerySnippetProps {
+  gallery: { title: string; url: string }[];
 }
 
 const ImageCard: React.FC<ImageCardProps> = ({ imageUrl, caption }) => {
@@ -16,26 +20,27 @@ const ImageCard: React.FC<ImageCardProps> = ({ imageUrl, caption }) => {
   );
 };
 
-const HomeGallerySnippet: React.FC = () => {
-  const images = [
-    { imageUrl: '/contact.png', caption: 'OHIO AFRICAN COMMUNITY EXCELLENCE AWARD 2024' },
-    { imageUrl: '/contact.png', caption: 'OHIO AFRICAN COMMUNITY EXCELLENCE AWARD 2024' },
-    { imageUrl: '/contact.png', caption: 'OHIO AFRICAN COMMUNITY EXCELLENCE AWARD 2024' },
-    { imageUrl: '/contact.png', caption: 'OHIO AFRICAN COMMUNITY EXCELLENCE AWARD 2024' },
-    { imageUrl: '/contact.png', caption: 'OHIO AFRICAN COMMUNITY EXCELLENCE AWARD 2024' },
-  ];
-
+const HomeGallerySnippet: React.FC<HomeGallerySnippetProps> = ({ gallery }) => {
   return (
-    <section className="w-full flex flex-col items-center justify-center mb-6 bg-gradient-to-b from-[#fff] via-[#CFC086] to-[#fff]">  
-         <Header title="Gallery" description="Check out our gallery to explore past events memories"/>
-        <CarouselComponent images={images}/>
-        <section className="block w-full mt-6">
-            <div className="flex w-full justify-center">
-                <a href="/" className="hover:bg-[rgb(183,110,21)] px-6 block bg-[#b76e1f] w-fit text-white py-2 rounded-full font-bold">View More</a>
-            </div>
-        </section>
+    <section className="w-full flex flex-col items-center justify-center mb-6 bg-gradient-to-b from-[#fff] via-[#CFC086] to-[#fff]">
+      <Header title="Gallery" description="Check out our gallery to explore past event memories" />
+      <CarouselComponent
+        images={gallery.map((item) => ({
+          imageUrl: item.url,
+          caption: item.title,
+        }))}
+      />
+      <section className="block w-full mt-6">
+        <div className="flex w-full justify-center">
+          <a
+            href="/gallery"
+            className="hover:bg-[rgb(183,110,21)] px-6 block bg-[#b76e1f] w-fit text-white py-2 rounded-full font-bold"
+          >
+            View More
+          </a>
+        </div>
+      </section>
     </section>
-  
   );
 };
 
