@@ -13,16 +13,16 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-2 text-center md:text-left">About Event</h4>
             <ul className="space-y-1 text-center md:text-left">
-              <li><a href="#" className="hover:underline">About us</a></li>
-              <li><a href="#" className="hover:underline">Gallery</a></li>
-              <li><a href="#" className="hover:underline">Mission & Vision</a></li>
+              <li><a href="/about" className="hover:underline">About us</a></li>
+              <li><a href="/gallery" className="hover:underline">Gallery</a></li>
+              <li><a href="/about" className="hover:underline">Mission & Vision</a></li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold mb-2 text-center md:text-left">Connect with Us</h4>
             <ul className="space-y-1 text-center md:text-left">
-              <li><a href="#" className="hover:underline">Facebook</a></li>
-              <li><a href="#" className="hover:underline">Instagram</a></li>
+              <li><a href="https://www.facebook.com/share/15raxe5f4w/?mibextid=wwXIfr" className="hover:underline">Facebook</a></li>
+              <li><a href="https://www.instagram.com/oacea_usa/" className="hover:underline">Instagram</a></li>
               <li><a href="#" className="hover:underline">YouTube</a></li>
             </ul>
           </div>

@@ -14,10 +14,14 @@ const HomeContact = () => {
                 <Header title='Contact' description='Connect with us on the following various platforms'/>
                 <section className="w-full flex gap-4 justify-center">
                     <div className=" bg-gradient-to-r from-red-700 to-yellow-400 flex justify-center items-center rounded-full w-10 h-10">
+                        <a href="https://www.instagram.com/oacea_usa/" className="">
                         <Instagram/>
+                        </a>
                     </div>
                     <div className=" bg-gradient-to-r from-red-700 to-yellow-400 flex justify-center items-center rounded-full w-10 h-10">
+                        <a href="https://www.facebook.com/share/15raxe5f4w/?mibextid=wwXIfr" className="">
                         <Facebook/>
+                        </a>
                     </div>
                     <div className=" bg-gradient-to-r from-red-700 to-yellow-400 flex justify-center items-center rounded-full w-10 h-10">
                         <Youtube/>

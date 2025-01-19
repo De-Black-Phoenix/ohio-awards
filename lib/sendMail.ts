@@ -16,8 +16,8 @@ interface EmailData {
 
 export const sendEmail = async ({ name, email, message }: EmailData): Promise<{ success: boolean; message: string }> => {
   const mailOptions = {
-    from: 'kwasi.backenddev@gmail.com',
-    to: 'kwasiaddonyarkojunior@gmail.com', // Replace with your receiving email
+    from: 'amoakoquaysonobed@gmail.com',
+    to: 'Joeboy306@gmail.com', // Replace with your receiving email
     subject: `Ohio Excellence Awards Contact Form Submission`,
     text: `
       You have received a new contact form submission.

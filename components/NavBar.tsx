@@ -37,11 +37,10 @@ const NavBar = () => {
                   <SheetContent>
                     <SheetHeader className='flex flex-col gap-4'>
                       <SheetTitle className="mb-4"></SheetTitle>
-                        <VoteLink link="https://www.google.com/forms/about/" title="Vote" key={2} isMobile={true}/>
+                        <VoteLink link="https://docs.google.com/forms/d/e/1FAIpQLSc6jRUBlTUB0PtEhcD-v4rF_29GKf2egz7zvyoITXGayrckqg/viewform" title="Vote" key={2} isMobile={true}/>
                         <SheetClose asChild>
                           <MobileNavLink onClick={() => handleNavLinkClick('/')} link="/" title="Home" key={1}/>
                         </SheetClose>
-                        
                         <SheetClose asChild>
                           <MobileNavLink onClick={() => handleNavLinkClick('/about')} link="/about" title="About" key={3}/>
                         </SheetClose>
@@ -62,7 +61,7 @@ const NavBar = () => {
             <section className="hidden md:flex flex-col w-full mt-4 items-center ">
                 <Image src="/logo.png" alt="alt" width={150} height={150} />
                 <section className="w-9/12 flex justify-center gap-5 mt-4">
-                  <VoteLink link="https://www.google.com/forms/about/" title="Vote" key={2}/>
+                  <VoteLink link="https://docs.google.com/forms/d/e/1FAIpQLSc6jRUBlTUB0PtEhcD-v4rF_29GKf2egz7zvyoITXGayrckqg/viewform" title="Vote" key={2}/>
                   <NavLink link="/" title="Home" key={1}/>
                   <NavLink link="/about" title="About" key={3}/>
                   <CategoriesButton/>
