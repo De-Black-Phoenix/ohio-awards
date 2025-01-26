@@ -10,7 +10,7 @@ const GalleryTabs = ({ tags, awardees, performances, gallery }:any) => {
     return (
       <section className="w-full flex flex-col items-center justify-center mb-4 ">
         <section className="w-full">
-          <Tabs defaultValue="2022">
+          <Tabs defaultValue="2024">
             <TabsList className="flex w-full justify-center bg-transparent">
               {tags.map((tag:any, index:any) => (
                 <TabsTrigger

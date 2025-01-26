@@ -23,7 +23,7 @@ const Footer = () => {
             <ul className="space-y-1 text-center md:text-left">
               <li><a href="https://www.facebook.com/share/15raxe5f4w/?mibextid=wwXIfr" className="hover:underline">Facebook</a></li>
               <li><a href="https://www.instagram.com/oacea_usa/" className="hover:underline">Instagram</a></li>
-              <li><a href="#" className="hover:underline">YouTube</a></li>
+              <li><a href="https://youtube.com/@afro614multimedia?si=nWJKWDNwWi7skbtr" className="hover:underline">YouTube</a></li>
             </ul>
           </div>
           <div>

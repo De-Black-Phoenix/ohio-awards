@@ -23,7 +23,10 @@ const ContactUs = () => {
                         </a>
                     </div>
                     <div className=" bg-gradient-to-r from-red-700 to-yellow-400 flex justify-center items-center rounded-full w-10 h-10">
+                        <a href="https://youtube.com/@afro614multimedia?si=nWJKWDNwWi7skbtr" className="">
                         <Youtube/>
+                        </a>
+                        
                     </div>
                     <div className=" bg-gradient-to-r from-red-700 to-yellow-400 flex justify-center items-center rounded-full w-10 h-10">
                         <Twitter/>

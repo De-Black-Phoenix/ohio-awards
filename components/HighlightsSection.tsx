@@ -22,7 +22,7 @@ const HighlightsSection: React.FC<HighlightsSectionProps> = ({
       <Header title='Highlights' description='Explore highlights of past events awardees and video shots'/>
 
       <section className="w-11/12 md:w-9/12">
-        <Tabs defaultValue={tags[0]}>
+        <Tabs defaultValue='2024'>
           <TabsList className="flex w-full justify-center bg-transparent">
             {tags.map((tag, index) => (
               <TabsTrigger
